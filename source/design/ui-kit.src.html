@@ -1,0 +1,229 @@
+<title>UI-кит ПИМС</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Vela Sans";src:url("fonts/VelaSans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Vela Sans";src:url("fonts/VelaSans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Vela Sans";src:url("fonts/VelaSans-SemiBold.woff2") format("woff2");font-weight:600;font-display:swap}
+/*DS*/
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-body)/var(--lh-body) var(--text);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+.k{max-width:1340px;margin:0 auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px));padding-block:40px 120px;display:grid;gap:var(--s-4)}
+.k-top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:8px 0 32px}
+.logo{display:inline-flex;align-items:center;height:32px;padding:0 11px;background:var(--red);color:#fff;font:700 17px/1 var(--head);letter-spacing:.06em}
+.k-hd{display:grid;gap:16px;padding:0 0 40px}
+.k-hd p{max-width:44em}
+.k-nav{display:flex;flex-wrap:wrap;gap:8px}
+.k-nav a{color:var(--ink);text-decoration:none}
+.seg{display:inline-flex;padding:4px;border-radius:var(--r-pill);background:var(--paper);box-shadow:var(--sh-sm)}
+.seg button{border:0;background:none;font:500 var(--fs-sm)/1 var(--text);height:36px;padding:0 16px;border-radius:var(--r-pill);cursor:pointer;color:var(--ink-2)}
+.seg button.on{background:var(--ink);color:#fff}
+.sec{background:var(--paper);border-radius:var(--r-xl);padding:var(--s-12);display:grid;gap:var(--s-8);scroll-margin-top:24px}
+.sec-h{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end}
+.sec-h p{color:var(--ink-2)}
+.sw{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s-4)}
+.sw-c{display:grid;gap:12px}
+.sw-c i{display:block;height:120px;border-radius:var(--r-lg);background:var(--c);box-shadow:inset 0 0 0 1px var(--line)}
+.sw-c b{display:block;font:600 var(--fs-sm)/1.3 var(--text)}
+.sw-c span{display:block;font:400 var(--fs-xs)/1.4 var(--text);color:var(--ink-3)}
+.sw-c code,.mono{font:500 var(--fs-xs)/1.4 var(--text);color:var(--ink-2)}
+.grp{display:grid;gap:var(--s-4)}
+.grp>.t-label{color:var(--ink-3)}
+.ty{display:grid}
+.ty li{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px;align-items:baseline;padding:20px 0;border-top:1px solid var(--line)}
+.ty li:last-child{border-bottom:1px solid var(--line)}
+.ty .spec{display:grid;gap:2px;font:400 var(--fs-xs)/1.45 var(--text);color:var(--ink-3)}
+.ty .spec b{font:600 var(--fs-sm)/1.3 var(--text);color:var(--ink)}
+.fam{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-4)}
+.fam-c{background:var(--bg);border-radius:var(--r-lg);padding:var(--s-8);display:grid;gap:12px}
+.fam-c .big{font-size:96px;line-height:1;letter-spacing:-.04em}
+.note{background:var(--pink);color:var(--ink);border-radius:var(--r-lg);padding:20px 24px;font-size:var(--fs-sm)}
+.note b{color:var(--red)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.demo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-4)}
+.box{border-radius:var(--r-lg);padding:var(--s-8);display:grid;gap:16px;align-content:start;min-height:200px}
+.box-bg{background:var(--bg)}
+.box-red{background:var(--red);color:#fff}
+.box-dark{background:var(--dark);color:#fff}
+.box-pink{background:var(--pink)}
+.box .t-label{opacity:.6}
+.rad{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:var(--s-4)}
+.rad i{display:block;height:96px;background:var(--pink);border:1.5px solid var(--red)}
+.sh3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-8);background:var(--bg);border-radius:var(--r-lg);padding:var(--s-10)}
+.sh3 i{display:grid;place-items:end start;height:140px;background:var(--paper);border-radius:var(--r-lg);padding:16px;font:500 var(--fs-xs)/1 var(--text);font-style:normal;color:var(--ink-2)}
+.sp{display:grid;gap:10px}
+.sp li{display:grid;grid-template-columns:120px minmax(0,1fr);align-items:center;gap:16px}
+.sp i{display:block;height:16px;background:var(--red);border-radius:var(--r-2xs)}
+.card{background:var(--paper);border-radius:var(--r-lg);overflow:hidden;display:grid;box-shadow:inset 0 0 0 1px var(--line)}
+.card .ph{height:180px;background:var(--ph);display:grid;place-items:center;font:500 var(--fs-xs)/1 var(--text);color:var(--ph-t)}
+.card .b{padding:20px;display:grid;gap:12px}
+.card .pr{display:flex;gap:24px;padding-top:12px;border-top:1px solid var(--line)}
+.card .pr span{display:block;font-size:var(--fs-xs);color:var(--ink-3)}
+.card .pr b{display:block;font:500 var(--fs-h4)/1.1 var(--head);letter-spacing:var(--ls-h4)}
+.card .pl{border-top:1px solid var(--line)}
+.card .pl li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:var(--fs-sm);color:var(--ink-2)}
+.card .pl small{font-size:var(--fs-sm);color:var(--ink-3)}
+.card .pl b{font:500 var(--fs-h5)/1 var(--head);letter-spacing:var(--ls-h5);color:var(--ink)}
+.stp{display:inline-flex;gap:4px;padding:6px;border-radius:var(--r-pill);background:var(--paper);box-shadow:var(--sh-md)}
+.stp span{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px 0 6px;border-radius:var(--r-pill);font:500 var(--fs-body)/1 var(--text);color:var(--ink-3)}
+.stp i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:600 var(--fs-sm)/1 var(--text);font-style:normal;background:var(--soft);color:var(--ink-2)}
+.stp .dn{color:var(--ink)}.stp .dn i{background:var(--ink);color:#fff}
+.stp .on{background:var(--ink);color:#fff}.stp .on i{background:var(--red);color:#fff}
+.tile{background:var(--bg);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column;gap:6px;min-height:200px}
+.tile .ic2{margin-top:auto;align-self:flex-end;width:72px;height:72px;border-radius:var(--r-md);background:var(--pink);color:var(--red);display:grid;place-items:center}
+.tile .ic2 svg{width:30px;height:30px}
+.ico.lime{background:var(--lime);box-shadow:none}
+.fld{display:grid;gap:8px}
+.fld label{font:500 var(--fs-xs)/1 var(--text);color:var(--ink-2)}
+.fld input{height:var(--btn-m);border-radius:var(--r-sm);border:1px solid var(--line-2);background:var(--paper);padding:0 16px;font:400 var(--fs-body)/1 var(--text);color:var(--ink);outline:none}
+.fld input:focus{border-color:var(--ink)}
+.fld input.soft{background:var(--bg);border-color:transparent}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:var(--fs-xs);color:var(--ink-2)}
+.chk i{flex:none;width:18px;height:18px;border-radius:var(--r-2xs);border:1.5px solid var(--line-2);margin-top:1px}
+.chk i.on{background:var(--red);border-color:var(--red);position:relative}
+.chk i.on::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.seg2{display:inline-flex;padding:4px;border-radius:var(--r-pill);background:var(--bg)}
+.seg2 span{height:36px;padding:0 16px;border-radius:var(--r-pill);display:inline-flex;align-items:center;font:500 var(--fs-sm)/1 var(--text);color:var(--ink-2)}
+.seg2 span.on{background:var(--paper);color:var(--ink);box-shadow:var(--sh-sm)}
+.ico{width:44px;height:44px;border-radius:50%;display:inline-grid;place-items:center;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ink)}
+.ico.ink{background:var(--ink);color:#fff;box-shadow:none}
+.ico.red{background:var(--red);color:#fff;box-shadow:none}
+.ico svg{width:18px;height:18px}
+.ph-d{height:160px;border-radius:var(--r-lg);background:var(--ph);display:grid;place-items:center;font:500 var(--fs-xs)/1 var(--text);color:var(--ph-t)}
+.ph-d.on-pink{background:var(--pink-2)}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-8)}
+@media (max-width:900px){
+  .sw{grid-template-columns:repeat(2,minmax(0,1fr))}.rad{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .demo,.fam,.cols2,.sh3,.sec-h{grid-template-columns:minmax(0,1fr)}.ty li{grid-template-columns:minmax(0,1fr)}
+  .sec{padding:24px}.k{--gut:16px}
+}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.4 3.6 2.9 10.7c-1.3.5-1.3 1.2-.2 1.6l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.4-1.6Zm-3.5 4.1-8.4 7.6-.3 3.4-1.6-4.9 9.6-6.1c.5-.3.9-.1.7 0Z"/></symbol>
+  <symbol id="i-ar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-wheel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.2"/><path d="M3.6 11.2c2.6-.9 5-1 6.2.2M20.4 11.2c-2.6-.9-5-1-6.2.2M12 14.2v6.2"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 16.8h2M11 16.8h2"/></g></symbol>
+  <symbol id="i-al" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m6-6-6 6 6 6"/></symbol>
+</svg>
+
+<div class="k">
+  <div class="k-top">
+    <span class="logo">ПИМС</span>
+    <div class="seg" id="ft" role="group" aria-label="Шрифт"><button data-v="vo" class="on">Vela Sans + Onest</button><button data-v="inter">Inter</button></div>
+  </div>
+  <header class="k-hd">
+    <h1 class="h1">UI-кит ПИМС</h1>
+    <p class="t-lead">Основа дизайна сайта, компьютерная версия. Цвета взяты из презентаций ПИМС в Фигме, шрифты — из базы макетов. Всё ниже — те же токены, что на главной: поменяли здесь — поменялось везде.</p>
+    <nav class="k-nav" aria-label="Разделы">
+      <a class="chip chip-line" href="#colors">Цвета</a><a class="chip chip-line" href="#fonts">Шрифты</a><a class="chip chip-line" href="#type">Типографика</a><a class="chip chip-line" href="#buttons">Кнопки</a><a class="chip chip-line" href="#chips">Метки</a><a class="chip chip-line" href="#surfaces">Карточки и панели</a><a class="chip chip-line" href="#forms">Поля и переключатели</a><a class="chip chip-line" href="#shape">Скругления, тени, отступы</a>
+    </nav>
+  </header>
+
+  <section class="sec" id="colors">
+    <div class="sec-h"><h2 class="h2">Цвета</h2><p>Красный — главный цвет действия и акцента. Розовый — плашки, фон под фото товаров и кнопка «Подробнее» в карточках. Салатовый — только метки и иконка тест-драйва. Чёрный — текст и подвал.</p></div>
+    <div class="grp"><span class="t-label">Бренд</span><div class="sw" data-sw="red:Красный:кнопки, цифры, акценты|red-h:Красный, наведение:нажатие и наведение|pink:Розовый:плашки, «Подробнее» в карточках, фон товаров|pink-2:Розовый плотный:наведение, фото на розовом|lime:Салатовый:метки и тест-драйв"></div></div>
+    <div class="grp"><span class="t-label">Нейтральные</span><div class="sw" data-sw="ink:Чёрный:заголовки и основной текст|ink-2:Серый тёмный:описания|ink-3:Серый:подписи, второстепенное|bg:Фон страницы:между белыми блоками|paper:Белый:карточки и блоки|soft:Светлый тёплый:фон внутри карточек, наведение|dark:Тёмный:подвал, тёмные плашки|dark-2:Тёмный 2:тёмные фото-плашки|ph:Плейсхолдер:место под фото|ph-t:Текст плейсхолдера:подпись места под фото"></div></div>
+  </section>
+
+  <section class="sec" id="fonts">
+    <div class="sec-h"><h2 class="h2">Шрифты</h2><p>Заголовки — Vela Sans, текст и интерфейс — Onest. Оба с кириллицей. Переключатель вверху показывает Inter для сравнения.</p></div>
+    <div class="fam">
+      <div class="fam-c"><span class="t-label" style="color:var(--ink-3)">Заголовки · var(--head)</span><span class="big" style="font-family:var(--head);font-weight:500">Аа Бб</span><p class="t-sm" style="font-family:var(--head)">Мастер-классы и аренда аппаратов в одном пространстве</p><span class="mono" data-fam="head"></span></div>
+      <div class="fam-c"><span class="t-label" style="color:var(--ink-3)">Текст · var(--text)</span><span class="big" style="font-family:var(--text);font-weight:500">Аа Бб</span><p class="t-sm">Экспертная теория и практика на моделях в один день.</p><span class="mono" data-fam="text"></span></div>
+    </div>
+    <p class="note"><b>Важно.</b> В презентациях ПИМС стоит DM Sans, но в нём нет кириллицы: русские буквы Фигма подставляет из другого шрифта, на сайте так не получится. Ждём ответа ПИМС; если выберут Inter — меняется одна строка в токенах.</p>
+  </section>
+
+  <section class="sec" id="type">
+    <div class="sec-h"><h2 class="h2">Типографика</h2><p>Крупное слово (дисплей) для шагов «Учитесь / Арендуйте / Зарабатывайте», заголовок раздела (56–80 px, тянется от ширины экрана, акцентное слово — градиентом), пять уровней заголовков и пять — текста. Новые размеры не добавляем: если нужен другой — сначала решаем, какой это уровень.</p></div>
+    <ul class="ty" id="tyList">
+      <li data-ty="t-display"><span class="t-display">Учитесь</span></li>
+      <li data-ty="t-sec"><span class="t-sec">Ближайшие <span class="acc">мастер-классы</span></span></li>
+      <li data-ty="h1"><span class="h1">Всё для врача-косметолога</span></li>
+      <li data-ty="h2"><span class="h2">Ближайшие мастер-классы</span></li>
+      <li data-ty="h3"><span class="h3">ПИМС — пространство для врачей-косметологов</span></li>
+      <li data-ty="h4"><span class="h4">Аренда аппаратов</span></li>
+      <li data-ty="h5"><span class="h5">Карманные УЗИ Dawei</span></li>
+      <li data-ty="t-lead"><span class="t-lead">Экспертная теория и практика в течение одного дня. Каждую неделю — новые темы.</span></li>
+      <li data-ty="t-body"><span class="t-body">Почасово или посуточно в вашей клинике — привезём и установим.</span></li>
+      <li data-ty="t-sm"><span class="t-sm">Игольчатый RF-лифтинг, фотоомоложение и RF-подтяжка</span></li>
+      <li data-ty="t-xs"><span class="t-xs">Пластический хирург, косметолог · ежедневно, 10:00–20:00</span></li>
+      <li data-ty="t-label"><span class="t-label">Мастер-классы · Аренда</span></li>
+    </ul>
+  </section>
+
+  <section class="sec" id="buttons">
+    <div class="sec-h"><h2 class="h2">Кнопки</h2><p>Чёрная — основное действие и широкие кнопки под блоками. Красная — только главное: «Записаться», «Арендовать», «Смотреть ближайшие мастер-классы». В карточках рядом с красной — чёрная «Подробнее» с шевроном. Кнопки однотонные; при наведении плавно проявляется градиент фирменного красного. Обводка — нейтральные действия. На красном и тёмном — белая и прозрачная. Все кнопки при наведении меняют заливку.</p></div>
+    <div class="grp"><span class="t-label">Варианты · размер L, 56 px</span>
+      <div class="row"><a class="btn btn-red" href="#buttons"><svg aria-hidden="true"><use href="#i-tg"/></svg>Записаться</a><a class="btn btn-ink" href="#buttons">Подробнее ›</a><a class="btn btn-ink" href="#buttons">Смотреть препараты</a><a class="btn btn-out" href="#buttons">Заказать звонок</a></div></div>
+    <div class="grp"><span class="t-label">Размеры · L 56 · M 48 · S 40</span>
+      <div class="row"><a class="btn btn-red" href="#buttons">Арендовать</a><a class="btn btn-red btn-m" href="#buttons">Арендовать</a><a class="btn btn-red btn-sm" href="#buttons">Арендовать</a><a class="btn btn-ink btn-sm" href="#buttons">Подробнее ›</a></div></div>
+    <div class="demo">
+      <div class="box box-red"><span class="t-label">На красном</span><div class="row"><a class="btn btn-white" href="#buttons">Перезвоните мне</a><a class="btn btn-ghost" href="#buttons">Подробнее</a></div></div>
+      <div class="box box-dark"><span class="t-label">На тёмном и фото</span><div class="row"><a class="btn btn-red" href="#buttons">Записаться</a><a class="btn btn-ghost" href="#buttons">Смотреть видео</a></div></div>
+      <div class="box box-bg"><span class="t-label">Иконки-кнопки · 44 px · стрелки одной линией</span><div class="row"><span class="ico"><svg><use href="#i-al"/></svg></span><span class="ico ink"><svg><use href="#i-ar"/></svg></span><span class="ico red"><svg><use href="#i-tg"/></svg></span><span class="ico lime"><svg><use href="#i-wheel"/></svg></span></div></div>
+    </div>
+    <div class="grp"><span class="t-label">Градиент в акцентах · вариант, обсуждаем</span><div class="row"><a class="btn btn-red" style="background-image:var(--grad)" href="#buttons">Записаться</a><span class="h2" style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">2 500+</span><span style="display:inline-block;width:160px;height:56px;border-radius:var(--r-pill);background:var(--grad)"></span></div></div>
+    <div class="grp"><span class="t-label">Широкая кнопка под блоком</span><a class="btn btn-ink" style="width:100%;height:84px;font:500 var(--fs-h5)/1 var(--head)" href="#buttons">Смотреть все мастер-классы</a></div>
+  </section>
+
+  <section class="sec" id="chips">
+    <div class="sec-h"><h2 class="h2">Метки</h2><p>Высота 32 px, полное скругление. Серые — бренды и списки, салатовые — «Новинка», «Тест-драйв», «Пространство ПИМС». Бренды поверх фото препаратов — белые с тенью. Шаги 1-2-3 — одна плашка, липнет сверху в блоке «В одном пространстве».</p></div>
+    <div class="row"><span class="chip chip-grey">Сферогель</span><span class="chip chip-grey">Exo-PDRN и Exo Peel</span><span class="chip chip-lime">Новинка</span><span class="chip chip-lime">Тест-драйв перед покупкой</span><span class="chip chip-lime">Пространство ПИМС для врачей-косметологов</span><span class="chip chip-ink">Почасово</span><span class="chip chip-line">Расписание</span><span class="chip" style="height:40px;padding:0 16px;font-size:var(--fs-sm);box-shadow:0 4px 14px -4px rgba(28,25,25,.18),inset 0 0 0 1px var(--line)">Bellarti</span></div>
+    <div class="grp"><span class="t-label">Шаги</span><div><span class="stp"><span class="dn"><i>1</i>Учитесь</span><span class="on"><i>2</i>Арендуйте</span><span><i>3</i>Зарабатывайте</span></span></div></div>
+  </section>
+
+  <section class="sec" id="surfaces">
+    <div class="sec-h"><h2 class="h2">Карточки и панели</h2><p>Белые блоки на сером фоне. Большие панели — скругление 32, карточки внутри — 24. Розовая — карточка товара (аппарат на розовом фоне), красная — главное направление.</p></div>
+    <div class="demo">
+      <div class="card"><div class="ph">Фото аппарата</div><div class="b"><span class="h4">InMode</span><span class="t-sm" style="color:var(--ink-2)">Игольчатый RF-лифтинг и фотоомоложение</span><ul class="pl"><li><span>Посуточно</span><b>от 30 000 ₽</b></li><li><span>Почасово <small>(за линию)</small></span><b>от 18 ₽</b></li></ul><div class="row"><a class="btn btn-red btn-sm" href="#surfaces">Арендовать</a><a class="btn btn-ink btn-sm" href="#surfaces">Подробнее ›</a></div></div></div>
+      <div class="box box-pink"><span class="t-label" style="color:var(--red);opacity:1">Карточка товара</span><div class="ph-d on-pink">Фото: BeeLift на розовом</div><span class="h4">BeeLift</span><span class="t-sm" style="color:var(--ink-2)">SMAS-лифтинг лица и тела</span><span class="t-body" style="color:var(--red);font-weight:500">2,3 млн ₽</span></div>
+      <div class="box box-red"><span class="t-label">Красная панель</span><span class="h3">Мастер-классы</span><span class="t-sm" style="opacity:.8">Теория со спикером и практика на своей модели</span><div class="ph-d" style="background:rgba(255,255,255,.18);color:rgba(255,255,255,.8)">Фото практики</div></div>
+    </div>
+    <div class="grp"><span class="t-label">Плитка с картинкой · варианты покупки</span><div class="demo"><div class="tile"><span class="h5">Рассрочка</span><span class="t-sm" style="color:var(--ink-2)">на 12 месяцев</span><span class="ic2"><svg><use href="#i-cal"/></svg></span></div><div class="tile"><span class="h5">Тест-драйв на неделю</span><span class="t-sm" style="color:var(--ink-2)">14 ₽ за линию</span><span class="ic2"><svg><use href="#i-wheel"/></svg></span></div></div></div>
+    <div class="grp"><span class="t-label">Цифры</span><div class="row" style="gap:48px"><span class="h1" style="color:var(--red)">500+</span><span class="h1" style="color:var(--red)">2 500+</span><span class="h1" style="color:var(--red)">10–12</span></div></div>
+  </section>
+
+  <section class="sec" id="forms">
+    <div class="sec-h"><h2 class="h2">Поля и переключатели</h2><p>Поле — 48 px, скругление 12. На белом — с рамкой, внутри карточек — на сером фоне без рамки.</p></div>
+    <div class="cols2">
+      <div class="grp"><div class="fld"><label for="f1">Имя</label><input id="f1" placeholder="Как к вам обращаться"></div><div class="fld"><label for="f2">Телефон</label><input id="f2" class="soft" value="+7 "></div><span class="chk"><i class="on"></i>Соглашаюсь с политикой конфиденциальности и даю согласие на обработку персональных данных</span></div>
+      <div class="grp"><span class="t-label" style="color:var(--ink-3)">Переключатель</span><span class="seg2"><span class="on">Позвонить</span><span>Telegram</span><span>WhatsApp</span></span><span class="t-label" style="color:var(--ink-3);margin-top:12px">Плейсхолдер фото</span><div class="ph-d">Фото: зал на теории</div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="shape">
+    <div class="sec-h"><h2 class="h2">Скругления, тени, отступы</h2><p>Шаг отступов — 4 px. Поля страницы — 48 px, между блоками — 112 px. Тени почти не используем: блоки отделяются фоном.</p></div>
+    <div class="grp"><span class="t-label">Скругления</span><div class="rad" data-rad="2xs,xs,sm,md,lg,xl,pill"></div></div>
+    <div class="grp"><span class="t-label">Тени</span><div class="sh3"><i style="box-shadow:var(--sh-sm)">sm — метки на фото</i><i style="box-shadow:var(--sh-md)">md — всплывающие карточки</i><i style="box-shadow:var(--sh-lg)">lg — окна</i></div></div>
+    <div class="grp"><span class="t-label">Отступы</span><ul class="sp" data-sp="1,2,3,4,5,6,8,10,12,16,24"></ul></div>
+  </section>
+</div>
+
+<script>
+(function(){
+var cs=getComputedStyle(document.documentElement);
+function v(n){return cs.getPropertyValue("--"+n).trim()}
+function hex(c){var d=document.createElement("i");d.style.color=c;document.body.appendChild(d);var r=getComputedStyle(d).color;d.remove();var m=r.match(/\d+(\.\d+)?/g);if(!m)return c;
+  var h="#"+m.slice(0,3).map(function(x){return(+x).toString(16).padStart(2,"0")}).join("").toUpperCase();return m[3]!==undefined?r.replace(/\s/g,""):h}
+document.querySelectorAll("[data-sw]").forEach(function(g){g.innerHTML=g.dataset.sw.split("|").map(function(x){var p=x.split(":");
+  return '<div class="sw-c" style="--c:var(--'+p[0]+')"><i></i><div><b>'+p[1]+'</b><code>--'+p[0]+' · '+hex(v(p[0]))+'</code><span>'+p[2]+'</span></div></div>'}).join("")});
+function fill(){
+  document.querySelectorAll("#tyList li").forEach(function(li){var el=li.firstElementChild,s=getComputedStyle(el);if(li.querySelector(".spec"))li.querySelector(".spec").remove();
+    var fam=s.fontFamily.split(",")[0].replace(/"/g,""),ls=parseFloat(s.letterSpacing)||0,fs=parseFloat(s.fontSize);
+    li.insertAdjacentHTML("beforeend",'<span class="spec"><b>.'+li.dataset.ty+'</b>'+fam+' '+s.fontWeight+' · '+fs+' / '+Math.round(parseFloat(s.lineHeight))+' px'+(ls?' · трекинг '+(ls/fs).toFixed(3).replace("0.",".")+'em':'')+'</span>')});
+  document.querySelectorAll("[data-fam]").forEach(function(e){e.textContent=v(e.dataset.fam)});
+}
+document.querySelectorAll("[data-rad]").forEach(function(g){g.innerHTML=g.dataset.rad.split(",").map(function(r){return '<div class="sw-c"><i style="border-radius:var(--r-'+r+')"></i><div><b>--r-'+r+'</b><code>'+v("r-"+r)+'</code></div></div>'}).join("")});
+document.querySelectorAll("[data-sp]").forEach(function(g){g.innerHTML=g.dataset.sp.split(",").map(function(n){return '<li><code class="mono">--s-'+n+' · '+v("s-"+n)+'</code><i style="width:'+v("s-"+n)+'"></i></li>'}).join("")});
+var ft=document.getElementById("ft");
+ft.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(ft.children,function(x){x.classList.toggle("on",x===b)});document.documentElement.classList.toggle("f-inter",b.dataset.v==="inter");setTimeout(fill,60)});
+fill();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fill);
+})();
+</script>

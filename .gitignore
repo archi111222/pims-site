@@ -1,0 +1,13 @@
+# промежуточные файлы сборки
+source/design/*.src.html
+!source/design/glavnaya.src.html
+!source/design/ui-kit.src.html
+source/design/glavnaya.html
+source/design/ui-kit.html
+source/design/mk.html
+source/design/arenda.html
+source/design/kontakty.html
+# локальный сервер Артура
+serve.ps1
+запустить.bat
+__pycache__/
