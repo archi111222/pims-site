@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <title>ПИМС — Аренда</title>
+<meta name="pims-version" content="Аренда · дизайн v0.9">
 <meta name="description" content="Прототип главной страницы ПИМС">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7608,11 +7609,32 @@ mark();var tm;new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(mar
  document.addEventListener("focusin",function(e){var i=e.target;if(i.matches&&i.matches('input[type="tel"]')&&!i.value)i.value="+7 "});
  document.querySelectorAll('input[type="tel"]').forEach(function(i){i.placeholder="+7 (___) ___-__-__";i.setAttribute("maxlength","18");i.setAttribute("pattern",".{18}")})})();
 </script>
+
+<style>#proto{display:none!important}</style>
+
+
+
 <div id="mobStub" role="dialog" aria-label="Откройте на компьютере"><div class="ms-c"><svg class="ms-lg" aria-hidden="true"><use href="#i-logo"/></svg><b>Откройте на&nbsp;компьютере</b><p>Это макет десктопной версии сайта ПИМС. Мобильную версию соберём отдельно, на&nbsp;Тильде.</p><button type="button" id="msGo">Всё равно посмотреть</button></div></div>
-<style>#mobStub{display:none}@media (max-width:900px){#mobStub{display:grid;position:fixed;inset:0;z-index:2147483000;place-items:center;padding:24px;background:#FF0500;font-family:var(--text,system-ui,sans-serif)}html.ms-off #mobStub{display:none}html:not(.ms-off){overflow:hidden}}
+<style>#mobStub{display:none;position:fixed;inset:0;z-index:2147483000;place-items:center;padding:24px;background:#FF0500;font-family:var(--text,system-ui,sans-serif)}
+@media (max-width:900px){#mobStub{display:grid}html:not(.ms-off){overflow:hidden}}
+html.ms-mob #mobStub{display:grid}html.ms-mob:not(.ms-off){overflow:hidden}
+html.ms-off #mobStub{display:none!important}
 #mobStub .ms-c{display:grid;gap:14px;justify-items:start;max-width:360px;padding:32px 28px;border-radius:28px;background:#fff;color:#1C1919}
 #mobStub .ms-lg{width:112px;height:40px;color:#FF0500}
 #mobStub b{font:600 28px/1.1 var(--head,system-ui,sans-serif);letter-spacing:-.02em}
 #mobStub p{margin:0;font-size:16px;line-height:1.45;color:#57514f}
 #mobStub button{margin-top:6px;height:48px;padding:0 22px;border:1px solid rgba(28,25,25,.16);border-radius:999px;background:#fff;font:500 15px/1 var(--text,system-ui,sans-serif);color:#1C1919;cursor:pointer}</style>
-<script>document.getElementById("msGo").addEventListener("click",function(){document.documentElement.classList.add("ms-off")})</script>
+<script>(function(){
+  // В страницах нет meta viewport: телефон рисует их шириной ~980px как десктоп,
+  // поэтому телефон/планшет определяем по ширине экрана устройства.
+  var d=document.documentElement,m=document.querySelector('meta[name="viewport"]');
+  if(screen.width<=900){
+    d.classList.add("ms-mob");
+    if(!m){m=document.createElement("meta");m.name="viewport";document.head.appendChild(m)}
+    m.content="width=device-width,initial-scale=1";
+  }
+  document.getElementById("msGo").addEventListener("click",function(){
+    d.classList.add("ms-off");
+    if(m)m.content="width=1440"; // десктопный макет целиком, уменьшенный под экран
+  });
+})();</script>

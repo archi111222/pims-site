@@ -21,6 +21,11 @@ for src,out in PAGES.items():
         # логотип и «ПИМС» в подвале ведут на главную
         s=s.replace('href="#top" class="logo"','href="index.html" class="logo"').replace('href="#top" class="mk3-lg2"','href="index.html" class="mk3-lg2"').replace('<a class="ftr-h" href="#top">','<a class="ftr-h" href="index.html">')
     if out=='index.html': s=re.sub(r'<title>[^<]*</title>','<title>ПИМС — Главная</title>',s,count=1)
+    # панель прототипа (бейдж версии + настройки) на опубликованном сайте скрыта;
+    # версия страницы остаётся в <meta name="pims-version"> — видна в коде страницы
+    ver=re.search(r'id="protoH">([^<]+)<',s)
+    if ver: s=s.replace('</title>','</title>\n<meta name="pims-version" content="'+ver.group(1).strip()+'">',1)
+    s=s+'\n<style>#proto{display:none!important}</style>\n'
     # заглушка для телефонов
     stub=open(D+'site-stub.html',encoding='utf-8').read(); s=s+stub
     open(O+out,'w',encoding='utf-8').write(s)
