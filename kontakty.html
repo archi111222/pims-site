@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <title>ПИМС — Контакты</title>
-<meta name="pims-version" content="Контакты · дизайн v0.3">
+<meta name="pims-version" content="Контакты · дизайн v0.4">
 <meta name="description" content="Прототип главной страницы ПИМС">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -5525,6 +5525,10 @@ html.m3bg .mk3-bg{background:var(--coral-hero)!important}
 .mq-pm-v{aspect-ratio:auto!important;min-height:260px;height:auto}
 .mq-pm-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
+/* v0.50: абонемент — старая цена и скидка */
+.mq-abn2-pr s,.mq-abm-pr s{color:inherit;opacity:.7;text-decoration-thickness:1.5px}
+.mq-abm-off{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:var(--red);color:#fff;font:600 12.5px/1.4 var(--text);font-style:normal}
+
 /* ===================== Аренда — дизайн на системе ПИМС ===================== */
 /* обложка: низ — карточка заработка + три факта */
 .arh .mk3-ph .ar-ctg{position:absolute;left:16px;top:16px;z-index:3}
@@ -6478,6 +6482,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
   <symbol id="i-arr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5.5-5.5L19 12l-5.5 5.5"/></symbol><symbol id="i-arr-d" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m-5.5-5.5L12 19l5.5-5.5"/></symbol><symbol id="i-chev-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m14.5 6-6 6 6 6"/></symbol><symbol id="i-chev-r" viewBox="8.6 5.1 7.8 13.8"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m9.5 6 6 6-6 6"/></symbol><symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 4.3 2.9 11.4c-.9.4-.9 1.6.1 1.9l4.6 1.4 1.8 5.6c.2.7 1.1.9 1.6.4l2.6-2.4 4.8 3.5c.6.4 1.4.1 1.6-.6l3-15.6c.2-.9-.7-1.6-1.5-1.3zm-4 4.1-7.7 6.9-.3 3-1.3-4 9-6.2c.3-.2.6.1.3.3z"/></symbol>
   <symbol id="i-wheel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.2"/><path d="M3.6 11.2c2.6-.9 5-1 6.2.2M20.4 11.2c-2.6-.9-5-1-6.2.2M12 14.2v6.2"/></g></symbol><symbol id="i-grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></g></symbol><symbol id="i-trend" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 17.5l6-6 4 4 7-7.5"/><path d="M15 8h5.5v5.5"/></g></symbol><symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 16.8h2M11 16.8h2"/></g></symbol><symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8.5L19 7.5V21H6z"/><path d="M14.5 3v4.5H19M9.5 17.5l5-5"/><circle cx="10" cy="13" r=".9"/><circle cx="14" cy="17" r=".9"/></g></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M6.6 3.5h3l1.6 4.4-2 1.3a11.5 11.5 0 0 0 5.6 5.6l1.3-2 4.4 1.6v3a2 2 0 0 1-2.1 2A16.6 16.6 0 0 1 4.6 5.6a2 2 0 0 1 2-2.1z"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.8-6-6.8-11.3a6.8 6.8 0 0 1 13.6 0C18.8 15 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.4"/></g></symbol>
+  <symbol id="i-max" viewBox="0 0 100 100"><path fill="currentColor" fill-rule="evenodd" d="M50.7571 0.261719C78.2929 0.261719 99.8857 22.5974 99.8857 50.1474C99.8857 77.6974 77.6071 99.4903 51.0214 99.4903C41.5857 99.4903 37.0143 98.1617 29.65 92.9474C29.1429 92.5903 28.45 92.6831 28.0214 93.1403C22.3571 99.1831 7.85 103.426 7.18571 95.176C7.18571 80.7903 0 71.4474 0 49.876C0 21.5546 23.2214 0.261719 50.7571 0.261719ZM51.5286 24.8117C38.4643 24.126 28.2643 33.1974 26.0143 47.3831C24.15 59.1332 27.45 73.4546 30.2786 74.176C31.4786 74.4832 34.3571 72.276 36.4571 70.2974C36.85 69.926 37.45 69.8617 37.9071 70.1474C41.1786 72.1474 44.8786 73.6474 48.9571 73.8617C62.3714 74.5617 74.2571 64.0617 74.9643 50.6474C75.6643 37.2331 64.9429 25.5046 51.5286 24.8046V24.8117Z"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path fill="currentColor" d="M9.2 8.2c.3-.6.6-.6.9-.6h.6c.2 0 .4.1.5.4l.8 1.9c.1.2 0 .5-.1.7l-.5.6c-.1.1-.2.3 0 .5.6 1 1.5 1.9 2.5 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.3.3.5 0 .5-.2 1.2-.7 1.5-.6.4-1.5.6-2.6.2-1.6-.6-3.6-2.2-4.6-4-.6-1.1-.8-2.3-.6-3.1z"/></symbol>
 </svg>
 
@@ -6504,6 +6509,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
         <a class="hdr-ph" href="tel:+79811707828"><span>+7 981 170-78-28</span><small>ежедневно, 10:00–20:00</small></a>
         <a class="ico" href="https://t.me/marina_pims" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-tg"/></svg></a>
         <a class="ico" href="#" data-wa aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        <a class="ico" href="#" data-max aria-label="MAX"><svg><use href="#i-max"/></svg></a>
         <button class="burger" id="burger" aria-label="Открыть меню"><span></span></button>
       </div>
     </div>
@@ -6527,6 +6533,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
   <div class="mn-ct">
     <a class="btn btn-ink mn-tg" href="https://t.me/marina_pims" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Написать в Telegram</a>
     <a class="mn-ic" href="#" data-wa aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+    <a class="mn-ic" href="#" data-max aria-label="MAX"><svg aria-hidden="true"><use href="#i-max"/></svg></a>
     <span class="mn-mgr"><img src="media/av-marina.jpg" alt=""><span><b>Марина</b><small>менеджер ПИМС</small></span></span>
   </div>
   <div class="mn-cl">
@@ -6538,7 +6545,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
 </div>
 
 <div class="proto min" id="proto">
-  <button class="proto-h" id="protoH">Контакты · дизайн v0.3<i id="protoI">открыть</i></button>
+  <button class="proto-h" id="protoH">Контакты · дизайн v0.4<i id="protoI">открыть</i></button>
   <div class="proto-b">
     <div class="proto-r"><span>Фото и видео<small class="proto-sm">временно, из Telegram ПИМС</small></span><div class="seg" data-k="vis"><button data-v="on" class="on">показать</button><button data-v="off">заглушки</button></div></div>
     <div class="proto-r"><span>Фото команды</span><div class="seg" data-k="tm2"><button data-v="on">показать</button><button data-v="off" class="on">скрыть</button></div></div>
@@ -6586,12 +6593,13 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
           <a class="mk3-tel3" href="tel:+79811707828"><b>+7 981 170-78-28</b><small>ежедневно, 10:00–20:00</small></a>
           <a class="mk3-ic3" href="https://t.me/marina_pims" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-tg"/></svg></a>
           <a class="mk3-ic3" href="#" data-wa aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+          <a class="mk3-ic3" href="#" data-max aria-label="MAX"><svg><use href="#i-max"/></svg></a>
         </div>
       </div>
       <div class="mk3-mid">
         <h1 class="mk3-k">Контакты ПИМС в&nbsp;Санкт-Петербурге</h1>
         <p class="mk3-t">Приезжайте<br>на&nbsp;Кременчугскую</p>
-        <p class="mk3-s">Пространство ПИМС для врачей-косметологов: мастер-классы, аренда аппаратов и&nbsp;препараты. Марина ответит в&nbsp;Telegram, WhatsApp или по&nbsp;телефону.</p>
+        <p class="mk3-s">Пространство ПИМС для врачей-косметологов: мастер-классы, аренда аппаратов и&nbsp;препараты. Марина ответит в&nbsp;Telegram, MAX, WhatsApp или по&nbsp;телефону.</p>
         <div class="mk3-bb"><a class="btn btn-red mk3-b" href="https://t.me/marina_pims" target="_blank" rel="noopener">Написать в&nbsp;Telegram</a><a class="btn mk3-b2" href="tel:+79811707828"><svg class="ic"><use href="#i-phone"/></svg>Позвонить</a></div>
       </div>
       <div class="mk3-bot ar-bot">
@@ -6621,6 +6629,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
         <div class="ct-row"><div class="ct-ms">
           <a class="btn btn-red" href="https://t.me/marina_pims" target="_blank" rel="noopener"><svg><use href="#i-tg"/></svg>Написать в Telegram</a>
           <a class="btn btn-out ct-wa" href="#" data-wa aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+          <a class="btn btn-out ct-wa" href="#" data-max aria-label="MAX"><svg><use href="#i-max"/></svg></a>
         </div><div class="ct-ph2">
           <span class="ph-n">+7 981 170-78-28<small>ежедневно, 10:00–20:00<span class="pm">время работы — пример, уточнить</span></small></span>
           
@@ -6848,7 +6857,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
   <div class="wrap">
     <p class="st-k">С чего начать</p>
     <nav class="end2" aria-label="Мастер-классы и аренда">
-      <a class="ec ec-red" href="master-klassy.html#schedule"><div class="ec-im ec-cut"><img src="media/ec-uzi3.webp" alt="" loading="lazy"><em class="ctg ctg-v"><b>Временно</b>· из Фигмы ПИМС</em></div><div class="ec-tx"><b class="ec-t">Ближайшие <span class="nw">мастер-классы<svg class="ic chv"><use href="#i-chev-r"/></svg></span></b><p class="ec-p">Расписание на месяц — запишитесь к менеджеру в Telegram</p></div><div class="ec-ch"><i class="ac">С моделью — 0 ₽</i><i>Каждую неделю</i></div></a>
+      <a class="ec ec-red" href="master-klassy.html#schedule"><div class="ec-im ec-cut"><img src="media/ec-uzi3.webp" alt="" loading="lazy"><em class="ctg ctg-v"><b>Временно</b>· из Фигмы ПИМС</em></div><div class="ec-tx"><b class="ec-t">Ближайшие <span class="nw">мастер-классы<svg class="ic chv"><use href="#i-chev-r"/></svg></span></b><p class="ec-p">Расписание на месяц — запишитесь у менеджера</p></div><div class="ec-ch"><i class="ac">С моделью — 0 ₽</i><i>Каждую неделю</i></div></a>
       <a class="ec ec-pink" href="arenda.html"><div class="ec-im ec-dv ec-dv2"><img class="d2" src="media/dv-vol2.webp" alt="" loading="lazy"><img class="d1" src="media/dv-inmode2.webp" alt="" loading="lazy"></div><div class="ec-tx"><b class="ec-t">Аренда <span class="nw">аппаратов<svg class="ic chv"><use href="#i-chev-r"/></svg></span></b><p class="ec-p">Почасово у нас или посуточно в вашей клинике — без покупки своего аппарата</p></div><div class="ec-ch"><i class="ac">Тест-драйв перед покупкой</i><i>Morpheus8 — 7 500 ₽ в час</i></div></a>
     </nav>
   </div>
@@ -6866,7 +6875,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
       <div><h4><a class="ftr-h" href="master-klassy.html">Мастер-классы<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></h4><ul><li><a href="master-klassy.html#schedule">Расписание</a></li><li><a href="master-klassy.html#price">Условия участия</a></li><li><a href="master-klassy.html#formats">Выездной мастер-класс</a></li><li><a href="master-klassy.html#speakers">Спикеры</a></li><li><a href="master-klassy.html#price">Абонемент</a></li></ul></div>
       <div><h4><a class="ftr-h" href="arenda.html">Аренда<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></h4><ul><li><a href="arenda.html#rent" target="_blank" rel="noopener">Аппараты и цены</a></li><li><a href="arenda.html#earn">Сколько можно заработать</a></li><li><a href="arenda.html#how">Как проходит аренда</a></li><li><a href="arenda.html#faq">Частые вопросы</a></li></ul></div>
       <div><h4><a class="ftr-h" href="index.html">ПИМС<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></h4><ul><li><a href="#top">Главная</a></li><li><a href="#about">О ПИМС</a></li><li><a href="#" data-buy>Покупка аппаратов</a></li><li><a href="#preps-b">Препараты</a></li></ul></div>
-      <div><h4><a class="ftr-h" href="kontakty.html">Контакты<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></h4><ul class="ftr-ct"><li><svg aria-hidden="true"><use href="#i-phone"/></svg><span><span class="ftr-ph">+7 981 170-78-28</span><small>ежедневно, 10:00–20:00</small></span></li><li><svg aria-hidden="true"><use href="#i-tg"/></svg><a href="https://t.me/marina_pims" target="_blank" rel="noopener">Telegram</a></li><li><svg aria-hidden="true"><use href="#i-wa"/></svg><a href="#" data-wa>WhatsApp</a></li><li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Кременчугская ул., 11, к. 1<small>Вход со стороны дома 13</small></span></li></ul></div>
+      <div><h4><a class="ftr-h" href="kontakty.html">Контакты<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a></h4><ul class="ftr-ct"><li><svg aria-hidden="true"><use href="#i-phone"/></svg><span><span class="ftr-ph">+7 981 170-78-28</span><small>ежедневно, 10:00–20:00</small></span></li><li><svg aria-hidden="true"><use href="#i-tg"/></svg><a href="https://t.me/marina_pims" target="_blank" rel="noopener">Telegram</a></li><li><svg aria-hidden="true"><use href="#i-wa"/></svg><a href="#" data-wa>WhatsApp</a></li><li><svg aria-hidden="true"><use href="#i-max"/></svg><a href="#" data-max>MAX</a></li><li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Кременчугская ул., 11, к. 1<small>Вход со стороны дома 13</small></span></li></ul></div>
     </div>
     <div class="ftr-legal">
       <div>
@@ -7030,19 +7039,19 @@ var MKN={
 };
 var DEVS=[
   {n:"Morpheus8",sub:"Манипула платформы InMode",t:"Игольчатый RF-лифтинг лица и тела",chips:["InMode"],m:{day:["от 30 000 ₽","в сутки","цену по манипуле сверить"],hour:["7 500 ₽","в час"]},calcs:["m8"],
-    rows:[["Посуточно, 1 манипула",[["Понедельник и вторник","30 000 ₽"],["Среда — воскресенье","35 000 ₽"]]],["Посуточно, 2 манипулы",[["Понедельник и вторник","40 000 ₽"],["Среда — воскресенье","45 000 ₽"]]],["Скидки на посуточную",[["От 2 аренд в месяц","30 000 / 40 000 ₽"],["От 4 аренд в месяц","30 000 / 35 000 ₽"]]],["Почасово",[["Час","7 500 ₽"],["Абонемент на 5 часов","32 500 ₽"],["Абонемент на 10 часов","55 000 ₽"]],"Абонементы действуют 2 месяца."]],
+    rows:[["Посуточно, 1 манипула",[["Понедельник и вторник","30 000 ₽"],["Среда — воскресенье","35 000 ₽"]]],["Посуточно, 2 манипулы",[["Понедельник и вторник","40 000 ₽"],["Среда — воскресенье","45 000 ₽"]]],["Скидки на посуточную",[["От 2 аренд в месяц","30 000 / 40 000 ₽"],["От 4 аренд в месяц","30 000 / 35 000 ₽"]]],["Почасово",[["Час","7 500 ₽"],["Абонемент на 5 часов","32 500 ₽"],["Абонемент на 10 часов","55 000 ₽"]],"Абонемент оплачивается сразу и действует 2 месяца с даты покупки."]],
     hp:[["Morpheus8","Игольчатый RF-лифтинг лица и тела"],["Forma V","RF-подтяжка"]],
     tips:[["Лицо, Prime, Resurfacing","11 000 ₽"],["Тело","15 000 ₽"],["Forma V","12 500 ₽"]]},
   {n:"Lumecca",sub:"Манипула платформы InMode",t:"IPL-фотоомоложение: сосуды и пигмент",chips:["InMode"],m:{day:["от 30 000 ₽","в сутки","цену по манипуле сверить"],hour:["7 500 ₽","в час"]},calcs:["lum"],
-    rows:[["Посуточно, 1 манипула",[["Понедельник и вторник","30 000 ₽"],["Среда — воскресенье","35 000 ₽"]]],["Посуточно, 2 манипулы",[["Понедельник и вторник","40 000 ₽"],["Среда — воскресенье","45 000 ₽"]]],["Скидки на посуточную",[["От 2 аренд в месяц","30 000 / 40 000 ₽"],["От 4 аренд в месяц","30 000 / 35 000 ₽"]]],["Почасово",[["Час","7 500 ₽"],["Абонемент на 5 часов","32 500 ₽"],["Абонемент на 10 часов","55 000 ₽"]],"Абонементы действуют 2 месяца."]],
+    rows:[["Посуточно, 1 манипула",[["Понедельник и вторник","30 000 ₽"],["Среда — воскресенье","35 000 ₽"]]],["Посуточно, 2 манипулы",[["Понедельник и вторник","40 000 ₽"],["Среда — воскресенье","45 000 ₽"]]],["Скидки на посуточную",[["От 2 аренд в месяц","30 000 / 40 000 ₽"],["От 4 аренд в месяц","30 000 / 35 000 ₽"]]],["Почасово",[["Час","7 500 ₽"],["Абонемент на 5 часов","32 500 ₽"],["Абонемент на 10 часов","55 000 ₽"]],"Абонемент оплачивается сразу и действует 2 месяца с даты покупки."]],
     hp:[["Lumecca","Фотоомоложение, сосуды и пигмент"]]},
   {n:"Ultraformer III",t:"SMAS-лифтинг лица и тела",m:{day:["от 18 ₽","за линию","посуточно — сверить"],hour:["от 18 ₽","за линию"]},calcs:["uf"],
-    rows:[["По линиям",[["Базовая цена","25 ₽ за линию"],["От 2 000 линий","21 ₽ за линию"],["От 3 000 линий","18 ₽ за линию"]],"Чем больше линий, тем дешевле линия."]]},
-  {n:"Volnewmer",t:"Монополярный RF-лифтинг лица и тела",badge:"Новинка",m:{hour:["от 85 ₽","за импульс","формат сверить"]},vid:1,
-    rows:[["По импульсам",[["Базовая цена","95 ₽ за импульс"],["От 1 500 импульсов","90 ₽ за импульс"],["От 2 000 импульсов","85 ₽ за импульс"]],"Платите только за импульсы."],["Расходники",[["Электрод","800 ₽"],["Гель","2 500 ₽"]]]]},
-  {n:"BeeLift",t:"SMAS-лифтинг",m:{day:["от 14 000 ₽","в сутки"],hour:["14 ₽","за линию"]},
+    rows:[["По линиям",[["До 1 000 линий","25 ₽ за линию"],["1 000–2 000 линий","21 ₽ за линию"],["От 2 000 линий","18 ₽ за линию"]],"Чем больше линий, тем дешевле линия."]]},
+  {n:"Volnewmer",t:"Монополярный RF-лифтинг лица и тела",badge:"Новинка",m:{hour:["от 85 ₽","за импульс","формат сверить"]},vid:1,earn:{k:"остаётся вам при&nbsp;2&nbsp;пациентах",b:"от&nbsp;50&nbsp;900&nbsp;₽",li:[["Выручка с&nbsp;1&nbsp;пациента, в&nbsp;среднем","75&nbsp;000&nbsp;₽"],["Аренда","от&nbsp;85&nbsp;₽ за&nbsp;импульс"]]},
+    rows:[["По импульсам",[["До 1 500 импульсов","95 ₽ за импульс"],["1 500–2 000 импульсов","90 ₽ за импульс"],["От 2 000 импульсов","85 ₽ за импульс"]],"Платите только за импульсы."],["Расходники",[["Электрод для пациента","800 ₽"],["Гель, 100 мл","2 500 ₽"]]]]},
+  {n:"BeeLift",t:"SMAS-лифтинг",m:{day:["от 14 000 ₽","в сутки"],hour:["14 ₽","за линию"]},earn:{k:"прибыль с&nbsp;1&nbsp;пациента, в&nbsp;среднем",b:"от&nbsp;30&nbsp;000&nbsp;₽",li:[["Аренда","14&nbsp;₽ за&nbsp;линию"]]},
     rows:[["Посуточно",[["Сутки","от 14 000 ₽"]],"Привезём и установим в вашей клинике.","сутки — сверить с ПИМС"],["По линиям",[["Линия","14 ₽"]]]]},
-  {n:"Heleo 4",t:"Фотодинамическая терапия",m:{day:["35 000 ₽","за 2 недели"]},long:1,
+  {n:"Heleo 4",t:"Фотодинамическая терапия",m:{day:["35 000 ₽","за 2 недели"]},long:1,earn:{k:"остаётся вам за&nbsp;месяц при&nbsp;1&nbsp;пациенте в&nbsp;день",b:"60&nbsp;000&nbsp;₽",li:[["Процедура без&nbsp;косметики, в&nbsp;среднем","4&nbsp;000&nbsp;₽"],["Аренда на&nbsp;месяц","60&nbsp;000&nbsp;₽"]]},
     rows:[["В вашей клинике",[["2 недели","35 000 ₽"],["Месяц","60 000 ₽"]]]]}
 ];
 
@@ -7111,7 +7120,7 @@ function openDev(k){var d=DEVS[k];
     (DBUY[d.n]?'<div class="dv-own"><i aria-hidden="true"><svg><use href="#i-wallet"/></svg></i><div><b>Можно купить в&nbsp;клинику — '+DBUY[d.n][0]+'</b><span>'+DBUY[d.n][1]+'<span class="pm">по презентации BeeLift в Фигме — сверить</span></span></div></div>':'');
   var priceH='<div class="mk-pr">'+d.rows.map(function(r){return '<div class="row"><div class="top"><b>'+r[0]+'</b></div><ul>'+r[1].map(function(x){return '<li><span>'+x[0]+'</span><span>'+x[1]+'</span></li>'}).join("")+'</ul>'+(r[2]?'<p>'+r[2]+(r[3]?'<span class="pm">'+r[3]+'</span>':'')+'</p>':'')+'</div>'}).join("")+
     (d.tips?'<div class="row"><div class="top"><b>Насадки — оплачиваются отдельно</b></div><ul>'+d.tips.map(function(x){return '<li><span>'+x[0]+'</span><span>'+x[1]+'</span></li>'}).join("")+'</ul></div>':'')+'</div>';
-  var exH=d.calcs?'<div class="dv-ers">'+d.calcs.map(function(c){var e=ex(c);return '<div class="dv-er"><div class="dv-er-hd"><span>'+CALC[c].n+'</span><small>остаётся вам за&nbsp;день</small><b>'+fmt(e.net)+'&nbsp;₽</b></div><ul><li><span>'+e.l1+'</span><b>'+fmt(e.rev)+'&nbsp;₽</b></li><li><span>'+e.l2+'</span><b>−'+fmt(e.cost)+'&nbsp;₽</b></li><li class="m"><span>В&nbsp;месяц при&nbsp;2&nbsp;днях аренды</span><b>≈&nbsp;'+fmt(e.net*2)+'&nbsp;₽</b></li></ul></div>'}).join("")+'<p class="note">Пример — у&nbsp;каждого врача свои цены и&nbsp;число пациентов.<span class="pm">цифры сверить</span></p></div>':(d.vid?'<button class="phd dk v dv-vid" data-video="Видео: «Экономика RF-лифтинга на Volnewmer» — Алёна Кольке рассказывает, сколько можно заработать за 15 минут почасовой аренды" data-vert><span>Видео: экономика Volnewmer — Алёна Кольке</span><i class="ab-play" aria-hidden="true"></i></button>':'')+'<p class="spm-wait">Пример дня на этом аппарате — ждём от ПИМС цену процедуры для пациента и расход на одного пациента.</p>';
+  var exH=d.calcs?'<div class="dv-ers">'+d.calcs.map(function(c){var e=ex(c);return '<div class="dv-er"><div class="dv-er-hd"><span>'+CALC[c].n+'</span><small>остаётся вам за&nbsp;день</small><b>'+fmt(e.net)+'&nbsp;₽</b></div><ul><li><span>'+e.l1+'</span><b>'+fmt(e.rev)+'&nbsp;₽</b></li><li><span>'+e.l2+'</span><b>−'+fmt(e.cost)+'&nbsp;₽</b></li><li class="m"><span>В&nbsp;месяц при&nbsp;2&nbsp;днях аренды</span><b>≈&nbsp;'+fmt(e.net*2)+'&nbsp;₽</b></li></ul></div>'}).join("")+'<p class="note">Пример — у&nbsp;каждого врача свои цены и&nbsp;число пациентов.<span class="pm">цифры сверить</span></p></div>':(d.vid?'<button class="phd dk v dv-vid" data-video="Видео: «Экономика RF-лифтинга на Volnewmer» — Алёна Кольке рассказывает, сколько можно заработать за 15 минут почасовой аренды" data-vert><span>Видео: экономика Volnewmer — Алёна Кольке</span><i class="ab-play" aria-hidden="true"></i></button>':'')+(d.earn?'<div class="dv-ers"><div class="dv-er"><div class="dv-er-hd"><span>'+d.n+'</span><small>'+d.earn.k+'</small><b>'+d.earn.b+'</b></div><ul>'+d.earn.li.map(function(l){return '<li><span>'+l[0]+'</span><b>'+l[1]+'</b></li>'}).join("")+'</ul></div><p class="note">Цифры ПИМС, в&nbsp;среднем — у&nbsp;каждого врача свои цены и&nbsp;число пациентов.</p></div>':'<p class="spm-wait">Пример дня на этом аппарате — ждём от ПИМС цену процедуры для пациента и расход на одного пациента.</p>');
   var TB=[["price","Цены",priceH],["earn","Заработок",exH]];
   if(d.hp)TB.push(["hp","Насадки",'<div class="mk-sec"><h4>Манипулы<span class="pm">состав сверить</span></h4><div class="dv-hp">'+d.hp.map(function(h){return '<div><b>'+h[0]+'</b><span>'+h[1]+'</span></div>'}).join("")+'</div></div>']);
   TB.push(["zone","Задачи и зоны",dZone(d.n)]);
@@ -7156,7 +7165,7 @@ function ex(k){var c=CALC[k],rev=c.pt*c.p,cost=c.fix.reduce(function(a,f){return
 document.addEventListener("click",function(e){
   var c=e.target.closest("[data-call]");
   if(c){e.preventDefault();$$(".mdl").forEach(function(m){m.hidden=true});if(!$("#mnav").hidden)toggleNav(false);$("#cbForm").hidden=false;$("#cbModal .ok").hidden=true;openModal($("#cbModal"));setTimeout(function(){var i=$("#cbForm input[name=name]");if(i)i.focus()},60)}
-  if(e.target.closest("[data-wa]"))e.preventDefault();
+  if(e.target.closest("[data-wa],[data-max]"))e.preventDefault();
   var vv=e.target.closest("[data-video]");
   if(vv){e.preventDefault();var vp=$("#vidModal .vm-p"),vb=$("#vidModal .vm-v"),old=$("video",vb);if(old)old.remove();vp.classList.toggle("vert",vv.hasAttribute("data-vert"));$("span",vb).textContent=vv.getAttribute("data-video")||VDEF;var src=vv.getAttribute("data-src");vb.classList.toggle("has-v",!!src);if(src){vb.insertAdjacentHTML("afterbegin",'<video class="vm-vid" src="'+src+'" controls autoplay playsinline></video>')}openModal($("#vidModal"))}
 });

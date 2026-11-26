@@ -7,7 +7,7 @@ s=open(D+'glavnaya.src.html',encoding='utf-8').read()
 def rr(a,b,n=1):
     global s
     c=s.count(a); assert c==n,(c,a[:120]); s=s.replace(a,b)
-s=re.sub(r'Главная · дизайн v0\.\d+','Контакты · дизайн v0.3',s)
+s=re.sub(r'Главная · дизайн v0\.\d+','Контакты · дизайн v0.4',s)
 s=re.sub(r'<title>[^<]*</title>','<title>ПИМС — Контакты</title>',s,count=1)
 rr('''        <a href="#top" class="on">Главная</a>
         <a href="https://claude.ai/artifact/MgEtoEobnKeekMLqn8AYn1" target="_blank" rel="noopener">Мастер-классы</a>

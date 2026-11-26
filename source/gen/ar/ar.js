@@ -3,7 +3,7 @@
 var W=function(t){return '<span class="mq-wait">'+t+'</span>'};
 /* Ultraformer MPT — из прототипа «Аренды»; фото пока Ultraformer III */
 if(!DEVS.some(function(d){return d.n==="Ultraformer MPT"})){DEVS.push({n:"Ultraformer MPT",t:"SMAS-лифтинг нового поколения",m:{day:["от 35 ₽","за линию","посуточно — сверить"],hour:["от 35 ₽","за линию"]},
-  rows:[["По линиям",[["Базовая цена","40 ₽ за линию"],["Больше линий","35 ₽ за линию"]],"Чем больше линий, тем дешевле линия.","пороги скидки уточнить"]]});
+  rows:[["По линиям",[["До 2 000 линий","40 ₽ за линию"],["От 2 000 линий","35 ₽ за линию"]],"Чем больше линий, тем дешевле линия."]]});
   RCIMG.push("dv-ufmpt");DVZ.push([178,6])}
 var MPT=DEVS.length-1;
 var ORDER=[0,2,MPT,3,4,5];
@@ -44,8 +44,9 @@ document.addEventListener("click",function(e){if(e.target.closest("[data-pr]")){
 /* таблица заработка: строка открывает окно аппарата на вкладке «Заработок» */
 var ERR=[{k:"m8",d:0,s:"InMode · посуточно в клинике"},{k:"lum",d:0,s:"InMode · посуточно в клинике"},{k:"uf",d:2,s:"посуточно в клинике · по линиям"},
   {n:"Morpheus8",d:0,s:"InMode · почасово в ПИМС",cost:7500+11000,cs:"час 7 500 ₽ + насадка 11 000 ₽",p:45000,q:"сколько пациентов успевают за час?"},
-  {n:"Volnewmer",d:3,s:"почасово в ПИМС · за импульсы",cost:"от 85 ₽",cs:"за импульс"},{n:"BeeLift",d:4,s:"почасово в ПИМС · за линии",cost:"14 ₽",cs:"за линию"},
-  {n:"Heleo 4",d:5,s:"в клинике на 2 недели",cost:"35 000 ₽",cs:"за 2 недели"}];
+  {n:"Volnewmer",d:3,s:"почасово в ПИМС · за импульсы",cost:"от 85 ₽",cs:"за импульс",rev:"75 000 ₽",rs:"с 1 пациента, в среднем",net:"от 50 900 ₽",ns:"при 2 пациентах"},
+  {n:"BeeLift",d:4,s:"почасово в ПИМС · за линии",cost:"14 ₽",cs:"за линию",rev:"—",rs:"зависит от вашей цены",net:"от 30 000 ₽",ns:"с одного пациента, в среднем"},
+  {n:"Heleo 4",d:5,s:"в клинике на месяц",cost:"60 000 ₽",cs:"за месяц",rev:"4 000 ₽",rs:"за процедуру · 1 пациент в день",net:"60 000 ₽",ns:"за месяц"}];
 var EIMG={m8:"hp-m8",lum:"hp-lum"};
 function eCell(lb,b,sm,cls){return '<span class="ar-er-c'+(cls?' '+cls:'')+'" role="cell" data-lb="'+lb+'"><b>'+b+'</b>'+(sm?'<small>'+sm+'</small>':'')+'</span>'}
 function eRow(n,sub,d,img,c1,c2,c3,wait){return '<div class="ar-er-r'+(wait?' wait':'')+'" role="row" tabindex="0" data-er="'+d+'"><span class="ar-er-n" role="cell"><span class="ar-er-im"><img src="media/'+img+'.webp" alt="" loading="lazy"></span><span><b>'+n+'</b><small>'+sub+'</small></span></span>'+c1+c2+c3+'<i class="ar-er-go" aria-hidden="true"><svg class="ic chv"><use href="#i-chev-r"/></svg></i></div>'}
@@ -55,6 +56,7 @@ function erRows(){var t=$("#erT");if(!t)return;
       if(c.per)cd.push(r.k==="uf"?"по 1 000 линий на пациента":"насадки "+fmt(c.per[1]*c.pt)+" ₽");
       return eRow(c.n,r.s,r.d,img,eCell("Аренда и расходники",fmt(e.cost)+" ₽",cd.join(" + ")),eCell("Выручка",fmt(e.rev)+" ₽",c.pt+" "+plP(c.pt)+" × "+fmt(c.p)+" ₽"),eCell("Остаётся вам",fmt(e.net)+" ₽","","net"))}
     if(r.p)return eRow(r.n,r.s,r.d,img,eCell("Аренда и расходники",fmt(r.cost)+" ₽",r.cs),eCell("Выручка",fmt(r.p)+" ₽","1 пациент × "+fmt(r.p)+" ₽"),eCell("Остаётся вам",fmt(r.p-r.cost)+" ₽",'с одного пациента<span class="pm">'+r.q+'</span>',"net"));
+    if(r.net)return eRow(r.n,r.s,r.d,img,eCell("Аренда и расходники",r.cost,r.cs),eCell("Выручка",r.rev,r.rs),eCell("Остаётся вам",r.net,r.ns,"net"));
     return eRow(r.n,r.s,r.d,img,eCell("Аренда и расходники",r.cost,r.cs),eCell("Выручка",W("ждём")),eCell("Остаётся вам",W("ждём"),'<span class="pm">цена процедуры — у ПИМС</span>',"net"),1)}).join("")}
 erRows();
 function erOpen(r){openDev(+r.dataset.er);

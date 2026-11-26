@@ -8,7 +8,7 @@ s=open(D+'glavnaya.src.html',encoding='utf-8').read()
 def rr(a,b,n=1):
     global s
     c=s.count(a); assert c==n,(c,a[:120]); s=s.replace(a,b)
-VER='Аренда · дизайн v0.9'
+VER='Аренда · дизайн v0.10'
 s=re.sub(r'Главная · дизайн v0\.\d+',VER,s)
 s=re.sub(r'<title>[^<]*</title>','<title>ПИМС — Аренда</title>',s,count=1)
 # шапка

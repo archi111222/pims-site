@@ -1319,3 +1319,7 @@ html.m3bg .mk3-bg{background:var(--coral-hero)!important}
 .mq-pm-top{flex:1 1 auto}
 .mq-pm-v{aspect-ratio:auto!important;min-height:260px;height:auto}
 .mq-pm-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* v0.50: абонемент — старая цена и скидка */
+.mq-abn2-pr s,.mq-abm-pr s{color:inherit;opacity:.7;text-decoration-thickness:1.5px}
+.mq-abm-off{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:var(--red);color:#fff;font:600 12.5px/1.4 var(--text);font-style:normal}
