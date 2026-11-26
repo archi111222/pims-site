@@ -6,7 +6,7 @@ s=open(D+'glavnaya.src.html',encoding='utf-8').read()
 def rr(a,b,n=1):
     global s
     c=s.count(a); assert c==n,(c,a[:120]); s=s.replace(a,b)
-VER='Мастер-классы · дизайн v0.50'
+VER='Мастер-классы · дизайн v0.51'
 s=re.sub(r'Главная · дизайн v0\.\d+',VER,s)
 s=re.sub(r'<title>[^<]*</title>','<title>ПИМС — Мастер-классы</title>',s,count=1)
 # header nav
