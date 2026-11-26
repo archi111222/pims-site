@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <title>ПИМС — Мастер-классы</title>
-<meta name="pims-version" content="Мастер-классы · дизайн v0.51">
+<meta name="pims-version" content="Мастер-классы · дизайн v0.52">
 <meta name="description" content="Прототип главной страницы ПИМС">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -5562,6 +5562,11 @@ html.m3bg .mk3-bg{background:var(--coral-hero)!important}
 .mq-abn2-pr s,.mq-abm-pr s{color:inherit;opacity:.7;text-decoration-thickness:1.5px}
 .mq-abm-off{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:var(--red);color:#fff;font:600 12.5px/1.4 var(--text);font-style:normal}
 
+/* v0.52: цена абонемента в баннере — как в окне: две строки справа от цены, прижаты к её низу */
+.mq-abn2-pr{align-items:flex-end!important;gap:6px 14px!important}
+.mq-abn2-pr>span{line-height:1.4;padding-bottom:1px}
+.mq-abn2-pr .mq-abm-off{margin-left:4px;padding:1px 7px;font-size:11.5px;line-height:1.35;vertical-align:1px}
+
 </style>
 <style id="pims-ui">
 /* ==========================================================================
@@ -6134,7 +6139,7 @@ html body .ftr-about .logo-s{width:124px!important;height:44px!important}
 </div>
 
 <div class="proto min" id="proto">
-  <button class="proto-h" id="protoH">Мастер-классы · дизайн v0.51<i id="protoI">открыть</i></button>
+  <button class="proto-h" id="protoH">Мастер-классы · дизайн v0.52<i id="protoI">открыть</i></button>
   <div class="proto-b">
     <div class="proto-r"><span>Фото и видео<small class="proto-sm">временно, из Telegram ПИМС</small></span><div class="seg" data-k="vis"><button data-v="on" class="on">показать</button><button data-v="off">заглушки</button></div></div>
     <div class="proto-r"><span>Доп. блоки с Главной</span><div class="seg" data-k="mkhm"><button data-v="off" class="on">скрыть</button><button data-v="on">показать</button></div></div>

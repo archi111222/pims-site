@@ -1323,3 +1323,8 @@ html.m3bg .mk3-bg{background:var(--coral-hero)!important}
 /* v0.50: абонемент — старая цена и скидка */
 .mq-abn2-pr s,.mq-abm-pr s{color:inherit;opacity:.7;text-decoration-thickness:1.5px}
 .mq-abm-off{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:var(--red);color:#fff;font:600 12.5px/1.4 var(--text);font-style:normal}
+
+/* v0.52: цена абонемента в баннере — как в окне: две строки справа от цены, прижаты к её низу */
+.mq-abn2-pr{align-items:flex-end!important;gap:6px 14px!important}
+.mq-abn2-pr>span{line-height:1.4;padding-bottom:1px}
+.mq-abn2-pr .mq-abm-off{margin-left:4px;padding:1px 7px;font-size:11.5px;line-height:1.35;vertical-align:1px}
